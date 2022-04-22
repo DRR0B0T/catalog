@@ -1,0 +1,424 @@
+.button-primary {
+    background: #d7262e;
+    border: none;
+    height: 30px;
+    width: 110px;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*styles for container*/
+
+.container {
+    position: relative;
+    top: 80px;
+    left: 80px;
+    width: 1200px;
+    height: 100vh;
+    display: flex;
+    max-width: 100vw;
+}
+/*styles for container*/
+
+/*styles for sidebar*/
+.sidebar {
+    width: 30%;
+    height: fit-content;
+    margin-right: 15px;
+    border-right: 1px solid #ddd;
+}
+.producer_head {
+    text-transform: uppercase;
+    color: #fff;
+    background: #0852a1;
+    height: 30px;
+    padding-left: 15px;
+    line-height: 32px;
+}
+.producer-title {
+    padding: 10px 15px;
+    border-bottom: 1px solid #dddddd;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+.producer-title svg {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+.producer-title span {
+    color: #0852a1;
+    font-weight: bold;
+}
+
+.producer-title:last-child {
+    border-bottom: none;
+}
+
+
+/*input checkbox*/
+.producer-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+    background: #f3f4f4;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+/*styles for sidebar*/
+
+/*styles for input search*/
+.search-input {
+    display: flex;
+    margin-top: 5px;
+    background-image: url(img/search.png);
+    background-size: 23px;
+    background-repeat: no-repeat;
+    background-position: 240px 7px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #727271;
+    padding: 10px;
+}
+
+/*styles for input search*/
+
+/*checked list items*/
+.list {
+    overflow-y: scroll;
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+
+}
+.list-item {
+    font-size: 11px;
+    user-select: none;
+}
+.list>li label {
+}
+
+.list>li span {
+    margin-left: 5px;
+    cursor: pointer;
+    word-wrap: normal;
+}
+#list::-webkit-scrollbar {
+    width: 13px;
+}
+#list::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f9f9fd;
+    border-radius: 10px;
+}
+#list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #0852a1;
+}
+
+input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    cursor: pointer;
+}
+
+
+/*checked list items*/
+
+/*styles for main*/
+
+.main-content {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.sort {
+    display: flex;
+    align-items: center;
+}
+.paginate {
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper {
+    width: 100%;
+    margin-top: 15px;
+    flex: 1;
+}
+.product-card {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding:10px;
+
+}
+.product-image{
+    border: 1px solid #ddd;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.product-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-description {
+    flex: 1;
+    margin: 0 5px 0 30px;
+}
+.product-title {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #0505bb;
+}
+.company-name {
+    font-size: 11px;
+    min-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #0505bb;
+}
+
+.product-article {
+}
+
+.product-action {
+    position: relative;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    width: 265px;
+    height: auto;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #d7262e;
+}
+.price b {
+    color: #d7262e;
+}
+.price span {
+    color: #d7262e;
+    font-size: 11px;
+}
+
+.product-action {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.product-bottom {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.stock-balance {
+    opacity: 0.5;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+
+}
+.counter-top {
+    display: flex;
+}
+.counter-btn {
+    width: 100%;
+    margin-top: 5px;
+}
+.counter-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    border: 1px solid #c5c6c6;
+    touch-action: manipulation;
+    cursor: pointer;
+    background: #ebecec center no-repeat;
+    background-size: 11px 11px;
+}
+
+.counter-input {
+    text-align: center;
+    color: #727271;
+    padding: 3px;
+    border-radius: 2px;
+    touch-action: manipulation;
+    border: 1px solid #ccc;
+    width: 60px;
+    height: 100%;
+}
+
+/*footer section*/
+.btn-primary {
+    background-color: #0505bb !important;
+    border: none !important;
+}
+/*footer section*/
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 53px;
+    height: 26px;
+}
+.switch-text {
+    position: absolute;
+    left: 350px;
+    top: 5px;
+    word-wrap: normal;
+}
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0852a1;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 4px;
+    bottom: 2px;
+    border-radius: 5px;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+
+input:checked + .slider {
+    background-color: #ccc;
+}
+input:checked + .slider:before {
+    background-color: #0852a1;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #0852a1;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+
+
+/*select*/
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    width: 200px;
+    border: 1px solid #eee;
+    margin-left: 5px;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: #fff;
+
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #000 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #000 transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #000;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.pages {
+    width: 60px;
+}
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/*select*/
+
+
+@media (min-width: 1250px) {
+
+}
