@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script defer src="main.js" ></script>
 </head>
 <body>
 <div class="container">
@@ -124,11 +125,13 @@
     <!-- main -->
     <div class="main-content">
        <div class="header">
-           <label class="switch">
-               <input type="checkbox">
-               <span class="slider"></span>
-           </label>
+           <div class="switch-wrapper">
+               <label class="switch">
+                   <input type="checkbox">
+                   <span class="slider"></span>
+               </label>
                <span class="switch-text">В наличии</span>
+           </div>
            <div class="sort">
                <span>Сортировать по:</span>
                <div class="custom-select" >
@@ -150,11 +153,17 @@
                 </div>
             </div>
        </div>
-        <section class="content-wrapper">
+        <section id="content-wrapper">
             <div class="product-card">
                 <div class="product-image">
-                <a href="#">
-                    <img  id="img1" class="product-img" loading="lazy" src="./img/product.jpg"  alt="product-image">
+                <a  href="#">
+                    <img
+                            id="img1"
+                            class="product-img"
+                            data-src="./img/product.jpg"
+                            loading="lazy"
+                            src=""
+                            alt="product-image">
                 </a>
                 </div>
                 <div class="product-description">
@@ -163,7 +172,7 @@
                     </div>
                     <div class="company-name">
                         <a href="#">
-                            <img src="#" alt="product-logo" class="product-logo">
+                            <img src="#" alt="product-logo" id="product-logo">
                         </a>
                         ПААЗ, ЗАО, г.Первоуральск
                     </div>
@@ -174,12 +183,12 @@
                 <div class="product-action">
                        <div class="product-top">
                            <div class="price">
-                               <b>2 627,10 Р</b> <span>Ваша цена</span>
+                               <b id="product-price"></b> <span>Ваша цена</span>
                            </div>
                        </div>
                    <div class="product-bottom">
                        <div class="stock-balance">
-                           На складе: <b>0 шт.</b>
+                           На складе: <b id="stock-balance">0 шт.</b>
                        </div>
                        <div class="counter">
                            <div class="counter-top">
@@ -207,81 +216,31 @@
                    </div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                <a href="#">
-                    <img id="img2" class="product-img" loading="lazy" src="./img/product.jpg"  alt="product-image">
-                </a>
-                </div>
-                <div class="product-description">
-                    <div class="product-title">
-                        <a class="product-title" href="#">Амортизатор (345\503) BPW, SAF, ТОНАР - ПААЗ</a>
-                    </div>
-                    <div class="company-name">
-                        <a href="#">
-                            <img src="#" alt="product-logo" class="product-logo">
-                        </a>
-                        ПААЗ, ЗАО, г.Первоуральск
-                    </div>
-                    <div class="product-article">
-                        <b>Артикул:</b> <span>П50.1.290.5005</span>
-                    </div>
-                </div>
-                <div class="product-action">
-                       <div class="product-top">
-                           <div class="price">
-                               <b>2 627,10 Р</b> <span>Ваша цена</span>
-                           </div>
-                       </div>
-                   <div class="product-bottom">
-                       <div class="stock-balance">
-                           На складе: <b>0 шт.</b>
-                       </div>
-                       <div class="counter">
-                           <div class="counter-top">
-                               <button class="counter-button">-</button>
-                               <div class="counter__input-wrapper">
-                                   <input
-                                           class="counter-input"
-                                           inputmode="numeric"
-                                           autocomplete="off"
-                                           name="quantity"
-                                           type="text"
-                                           data-counter-input
-                                           data-prev-value="1"
-                                           value="1" >
-                               </div>
-                               <button class="counter-button">+</button>
-                           </div>
-                           <div class="counter-bottom">
-                               <div>
-                                   <button type="button" class="button-primary counter-btn">В корзину</button>
-                               </div>
 
-                           </div>
-                       </div>
-                   </div>
-                </div>
-            </div>
 
 
         </section>
         <footer class="footer">
             <button type="button" class="button-primary footer-btn">Показать ещё</button>
-            <div class="pagination">
-                <a href="#">Предыдущая</a>
-                <a href="#">1</a>
-                <a class="active" href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">Сдедующая</a>
-            </div>
+            <ul id="pagination">
+                <li>Предыдущая</li>
+                <li>1</li>
+                <li class="active">2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li id="next">
+                    <a href="#">...</a>
+                </li>
+                <li >36</li>
+                <li>Сдедующая</li>
+            </ul>
         </footer>
     </div>
 </div>
-<script src="main.js"></script>
+
 
 </body>
 </html>

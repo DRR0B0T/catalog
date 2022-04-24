@@ -14,16 +14,14 @@
     position: relative;
     top: 80px;
     left: 80px;
-    width: 1200px;
-    height: 100vh;
+    max-width: 1200px;
     display: flex;
-    max-width: 100vw;
 }
 /*styles for container*/
 
 /*styles for sidebar*/
 .sidebar {
-    width: 30%;
+    width: 25%;
     height: fit-content;
     margin-right: 15px;
     border-right: 1px solid #ddd;
@@ -146,7 +144,7 @@ input[type="checkbox"] {
 /*styles for main*/
 
 .main-content {
-    width: 100%;
+    width: 75%;
 }
 
 .header {
@@ -162,7 +160,7 @@ input[type="checkbox"] {
     align-items: center;
 }
 
-.content-wrapper {
+#content-wrapper {
     width: 100%;
     margin-top: 15px;
     flex: 1;
@@ -172,18 +170,25 @@ input[type="checkbox"] {
     justify-content: space-between;
     border: 1px solid #ddd;
     padding:10px;
-
+    height: 180px;
 }
 .product-image{
+    position: relative;
     border: 1px solid #ddd;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    width: 200px;
+
+}
+.product-image a {
+
 }
 
 .product-img {
-    max-width: 100%;
-    height: auto;
+    background: no-repeat;
+    width: 100%;
+    height: 100%;
 }
 
 .product-description {
@@ -309,29 +314,37 @@ input[type="checkbox"] {
     color: #fff;
 }
 
-.pagination {
+#pagination {
     display: inline-block;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
-.pagination a {
+#pagination li {
     color: #fff;
     background-color: #0852A1;
     float: left;
-    padding: 8px 16px;
+    padding: 8px 10px;
     text-decoration: none;
     margin: 0 2px;
     transition: all 0.4s ease-in;
+    cursor: pointer;
 }
 
-.pagination a.active {
+
+
+#pagination li.active {
     background-color: #d7262e;
     color: white;
 }
 
-.pagination a:hover:not(.active) {
+#pagination li:hover:not(.active) {
     background-color: #ddd;
     color: #000;
+}
+#next {
+    background: #fff !important;
+    color: #0852A1 !important;
+    padding: 15px !important;
 }
 /*footer section*/
 
@@ -342,11 +355,12 @@ input[type="checkbox"] {
     width: 53px;
     height: 26px;
 }
+.switch-wrapper {
+    display: flex;
+    align-items: center;
+}
 .switch-text {
-    position: absolute;
-    left: 350px;
-    top: 5px;
-    word-wrap: normal;
+    margin-left: 5px;
 }
 /* Hide default HTML checkbox */
 .switch input {display:none;}
@@ -466,5 +480,8 @@ input:checked + .slider:before {
 
 
 @media (min-width: 1250px) {
+    .container{
+        max-width: 1200px;
+    }
 
 }

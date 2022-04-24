@@ -1,21 +1,56 @@
 'use strict'
 const url = './src/data.json'
-const img = document.querySelectorAll('.product-img')
+const img = document.getElementById('img1')
+const priceOfProduct = document.getElementById('product-price')
+const logoOfProduct = document.getElementById('product-logo')
+const stockBalance = document.getElementById('stock-balance')
 const search = document.querySelector('.search-input')
-const card = document.querySelector('.product-card')
+const items = document.querySelectorAll('#pagination li')
+let notesOnPageTen = 10
+let notesOnPageThirty = 30
+let data = []
+
 console.log(img)
 async function getData() {
   try {
-  const data = await fetch(url).then(response => response.json()).then(obj =>obj)
-
-  data.forEach(obj => {
-    console.log(obj.Image)
-  })
+    data = await fetch(url).then(response => response.json()).then(obj => obj)
+  //  card
+  data.forEach(({Image, logo, Price, Stock , Manufacturer_ID , unit}) => {
+    if(Image) img.src = Image
+    logoOfProduct.src = logo
+    priceOfProduct.innerHTML = `${Price} ₽`
+    stockBalance.innerHTML = `${Stock}  ${unit}.`
+})
   } catch (error) {
     console.log('Что-то пошло не так!')
   }
 }
 getData()
+
+
+
+
+//pagination
+for (let item of items) {
+  item.addEventListener('click', function () {
+    let pageNum = +this.innerHTML
+    const start = (pageNum - 1) * notesOnPageTen
+    const end = start + notesOnPageTen
+    let notes = data.slice(start, end)
+    console.log(notes)
+    // card.innerHTML = ''
+
+  })
+}
+
+
+//lazy img
+[].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
+  img.setAttribute('src', img.getAttribute('data-src'));
+  img.onload = function() {
+    img.removeAttribute('data-src');
+  };
+});
 
 //search
 search.oninput = function () {
@@ -37,6 +72,9 @@ search.oninput = function () {
 }
 
 
+
+
+//dropdown
 let x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
