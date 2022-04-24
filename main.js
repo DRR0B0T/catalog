@@ -6,6 +6,8 @@ const logoOfProduct = document.getElementById('product-logo')
 const stockBalance = document.getElementById('stock-balance')
 const search = document.querySelector('.search-input')
 const items = document.querySelectorAll('#pagination li')
+const switcher = document.getElementById('switcher')
+const contentWrapper = document.getElementById('content-wrapper')
 let notesOnPageTen = 10
 let notesOnPageThirty = 30
 let data = []
@@ -20,6 +22,78 @@ async function getData() {
     logoOfProduct.src = logo
     priceOfProduct.innerHTML = `${Price} ₽`
     stockBalance.innerHTML = `${Stock}  ${unit}.`
+    // let HtmlCatalog = ''
+    // HtmlCatalog += `
+    // <div class="product-card">
+    //             <div class="product-image">
+    //             <a  href="#">
+    //                 <img
+    //                         id="img1"
+    //                         class="product-img"
+    //                         data-src="./img/product.jpg"
+    //                         loading="lazy"
+    //                         src="${Image}"
+    //                         alt="product-image">
+    //             </a>
+    //             </div>
+    //             <div class="product-description">
+    //                 <div class="product-title">
+    //                     <a class="product-title" href="#">Амортизатор (345\\503) BPW, SAF, ТОНАР - ПААЗ</a>
+    //                 </div>
+    //                 <div class="company-name">
+    //                     <a href="#">
+    //                         <img src="${logo}" alt="product-logo" id="product-logo">
+    //                     </a>
+    //                     ПААЗ, ЗАО, г.Первоуральск
+    //                 </div>
+    //                 <div class="product-article">
+    //                     <b>Артикул:</b> <span>П50.1.290.5005</span>
+    //                 </div>
+    //             </div>
+    //             <div class="product-action">
+    //                    <div class="product-top">
+    //                        <div class="price">
+    //                            <b id="product-price">${Price}</b> <span>Ваша цена</span>
+    //                        </div>
+    //                    </div>
+    //                <div class="product-bottom">
+    //                    <div class="stock-balance">
+    //                        На складе: <b id="stock-balance">${Stock} ${unit}.</b>
+    //                    </div>
+    //                    <div class="counter">
+    //                        <div class="counter-top">
+    //                            <button class="counter-button">-</button>
+    //                            <div class="counter__input-wrapper">
+    //                                <input
+    //                                        class="counter-input"
+    //                                        inputmode="numeric"
+    //                                        autocomplete="off"
+    //                                        name="quantity"
+    //                                        type="text"
+    //                                        data-counter-input
+    //                                        data-prev-value="1"
+    //                                        value="1" >
+    //                            </div>
+    //                            <button class="counter-button">+</button>
+    //                        </div>
+    //                        <div class="counter-bottom">
+    //                            <div>
+    //                                <button type="button" class="button-primary counter-btn">В корзину</button>
+    //                            </div>
+    //
+    //                        </div>
+    //                    </div>
+    //                </div>
+    //             </div>
+    //         </div>
+    // `
+    // const html = `
+    // <div>
+    // ${HtmlCatalog}
+    // </div>
+    // `
+    // contentWrapper.innerHTML = html
+
 })
   } catch (error) {
     console.log('Что-то пошло не так!')
@@ -28,7 +102,13 @@ async function getData() {
 getData()
 
 
+//switch
+switcher.onchange = function() {
+  let val = this.value
+  if (val) {
 
+  }
+}
 
 //pagination
 for (let item of items) {
