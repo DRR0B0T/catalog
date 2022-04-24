@@ -139,7 +139,7 @@
                    </select>
                </div>
            </div>
-            <div class="paginate">
+            <div class="dropdown">
                 Показывать по:
                 <div class="custom-select pages" >
                     <select>
@@ -154,7 +154,7 @@
             <div class="product-card">
                 <div class="product-image">
                 <a href="#">
-                    <img class="product-img" src="./img/product.jpg"  alt="product-image">
+                    <img  id="img1" class="product-img" loading="lazy" src="./img/product.jpg"  alt="product-image">
                 </a>
                 </div>
                 <div class="product-description">
@@ -198,17 +198,86 @@
                                <button class="counter-button">+</button>
                            </div>
                            <div class="counter-bottom">
-                               <button type="button" class="button-primary counter-btn">В корзину</button>
+                               <div>
+                                   <button type="button" class="button-primary counter-btn">В корзину</button>
+                               </div>
+
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                <a href="#">
+                    <img id="img2" class="product-img" loading="lazy" src="./img/product.jpg"  alt="product-image">
+                </a>
+                </div>
+                <div class="product-description">
+                    <div class="product-title">
+                        <a class="product-title" href="#">Амортизатор (345\503) BPW, SAF, ТОНАР - ПААЗ</a>
+                    </div>
+                    <div class="company-name">
+                        <a href="#">
+                            <img src="#" alt="product-logo" class="product-logo">
+                        </a>
+                        ПААЗ, ЗАО, г.Первоуральск
+                    </div>
+                    <div class="product-article">
+                        <b>Артикул:</b> <span>П50.1.290.5005</span>
+                    </div>
+                </div>
+                <div class="product-action">
+                       <div class="product-top">
+                           <div class="price">
+                               <b>2 627,10 Р</b> <span>Ваша цена</span>
+                           </div>
+                       </div>
+                   <div class="product-bottom">
+                       <div class="stock-balance">
+                           На складе: <b>0 шт.</b>
+                       </div>
+                       <div class="counter">
+                           <div class="counter-top">
+                               <button class="counter-button">-</button>
+                               <div class="counter__input-wrapper">
+                                   <input
+                                           class="counter-input"
+                                           inputmode="numeric"
+                                           autocomplete="off"
+                                           name="quantity"
+                                           type="text"
+                                           data-counter-input
+                                           data-prev-value="1"
+                                           value="1" >
+                               </div>
+                               <button class="counter-button">+</button>
+                           </div>
+                           <div class="counter-bottom">
+                               <div>
+                                   <button type="button" class="button-primary counter-btn">В корзину</button>
+                               </div>
+
                            </div>
                        </div>
                    </div>
                 </div>
             </div>
 
+
         </section>
         <footer class="footer">
-            <button type="button" class="btn btn-primary">Показать ещё</button>
-
+            <button type="button" class="button-primary footer-btn">Показать ещё</button>
+            <div class="pagination">
+                <a href="#">Предыдущая</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">Сдедующая</a>
+            </div>
         </footer>
     </div>
 </div>

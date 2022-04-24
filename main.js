@@ -1,9 +1,43 @@
+'use strict'
+const url = './src/data.json'
+const img = document.querySelectorAll('.product-img')
+const search = document.querySelector('.search-input')
+const card = document.querySelector('.product-card')
+console.log(img)
+async function getData() {
+  try {
+  const data = await fetch(url).then(response => response.json()).then(obj =>obj)
+
+  data.forEach(obj => {
+    console.log(obj.Image)
+  })
+  } catch (error) {
+    console.log('Что-то пошло не так!')
+  }
+}
+getData()
+
+//search
+search.oninput = function () {
+  let value = this.value.trim()
+  let searchItems = document.querySelectorAll('.list li')
+  if(value !== '') {
+    searchItems.forEach(function (element) {
+      if (element.innerText.search(value) === -1) {
+        element.classList.add('hide')
+      } else {
+        element.classList.remove('hide')
+      }
+    })
+  } else {
+    searchItems.forEach((element) => {
+      element.classList.remove('hide')
+    })
+  }
+}
 
 
-
-
-
-var x, i, j, l, ll, selElmnt, a, b, c;
+let x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
 l = x.length;
@@ -23,15 +57,15 @@ for (i = 0; i < l; i++) {
     create a new DIV that will act as an option item: */
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
+    c.addEventListener("click", function (e) {
       /* When an item is clicked, update the original select box,
       and the selected item: */
-      var y, i, k, s, h, sl, yl;
+      let y, i, k, s, h, sl, yl;
       s = this.parentNode.parentNode.getElementsByTagName("select")[0];
       sl = s.length;
       h = this.parentNode.previousSibling;
       for (i = 0; i < sl; i++) {
-        if (s.options[i].innerHTML == this.innerHTML) {
+        if (s.options[i].innerHTML === this.innerHTML) {
           s.selectedIndex = i;
           h.innerHTML = this.innerHTML;
           y = this.parentNode.getElementsByClassName("same-as-selected");
@@ -48,7 +82,7 @@ for (i = 0; i < l; i++) {
     b.appendChild(c);
   }
   x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
+  a.addEventListener("click", function (e) {
     /* When the select box is clicked, close any other select boxes,
     and open/close the current select box: */
     e.stopPropagation();
@@ -61,13 +95,13 @@ for (i = 0; i < l; i++) {
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
+  let x, y, i, xl, yl, arrNo = [];
   x = document.getElementsByClassName("select-items");
   y = document.getElementsByClassName("select-selected");
   xl = x.length;
   yl = y.length;
   for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
+    if (elmnt === y[i]) {
       arrNo.push(i)
     } else {
       y[i].classList.remove("select-arrow-active");
